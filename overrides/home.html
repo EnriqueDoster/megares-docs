@@ -1,0 +1,404 @@
+<!-- Custom HTML site displayed as the Home chapter -->
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+
+<style>
+
+    /* Home page content centering */
+    .center-container { 
+        max-width: 748px; 
+        margin: 0px auto; 
+    }
+
+    /*Styles for the annoGraph*/    
+    #annoGraph {
+        text-align: center;
+    }
+    #annoGraph text {
+        font: 10px sans-serif;
+    }
+    #annoGraph rect.background {
+        fill: white;
+    }
+    #annoGraph .axis {
+        shape-rendering: crispEdges;
+    }
+    #annoGraph .axis path,
+    #annoGraph .axis line {
+        fill: none;
+        stroke: #000;
+    }
+
+    /*List Styles*/
+    ul ul li {
+        list-style-type:  circle;
+    }
+
+    /*Styles for the home page header*/
+    .md-main {
+        flex-grow: 0
+    }
+
+    .md-main__inner {
+        display: flex;
+        height: 100%;
+    }
+
+    .tx-container {
+        padding-top: .0rem;
+        background: linear-gradient(to bottom, var(--md-primary-fg-color), rgb(86, 178, 194) 100%,#fff 100%)
+    }
+
+    .tx-hero {
+        margin: 32px 2.8rem;
+        color: var(--md-primary-bg-color);
+        justify-content: center;
+    }
+
+    .tx-hero h1 {
+        font-size: 2.41rem;
+        margin-bottom: 1rem;
+        color: currentColor;
+        font-weight: 700
+    }
+
+    .tx-hero__content {
+        padding-bottom: 1rem;
+        margin: 0 auto;
+    }
+
+    .tx-hero__image{
+        width:17rem;
+        height:17rem;
+        order:1;
+        padding-right: 2.5rem;
+    }
+
+    .tx-hero .md-button {
+        margin-top: .5rem;
+        margin-right: .5rem;
+        color: var(--md-primary-bg-color)
+    }
+
+    .tx-hero .md-button--primary {
+        background-color: var(--md-accent-fg-color);    
+        border-color: var(--md-accent-fg-color);
+        color: #ffffff;
+    }
+
+    .tx-hero .md-button:focus,
+    .tx-hero .md-button:hover {
+        background-color: var(--md-accent-fg-color);
+        color: var(--md-default-bg-color);
+        border-color: var(--md-accent-fg-color)
+    }
+
+    .tx-hero .md-button--primary:hover {
+        background-color: #ffffff;
+        border-color: var(--md-primary-fg-color);
+        color: var(--md-primary-fg-color);
+    }
+
+    @media screen and (min-width:60em) {
+        .md-sidebar--secondary {
+            display: none !important;
+        }
+
+        .tx-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tx-hero__content {
+            max-width: 22rem;
+            margin-top: 3.5rem;
+            margin-bottom: 3.5rem;
+            margin-left: 1.0rem;
+            margin-right: 4.0rem;
+            align-items: center;
+        }
+    }
+
+    @media screen and (min-width:76.25em) {
+        .md-sidebar--primary {
+            display: none !important;
+        }
+    }
+
+
+</style>
+
+<!-- Main site Entry button descriptions -->
+<section class="tx-container">
+    <div class="md-grid md-typeset">
+      <div class="tx-hero">
+        <div class="tx-hero__image">
+          <img src="assets/angular-white-transparent.svg" draggable="false">
+        </div>
+        <div class="tx-hero__content">
+          <h1> MEGARes </h1>          
+          <p>Antimicrobial Resistance Database for High-Throughput Sequencing</p>
+          <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary">
+            Browse Database
+          </a>
+          <a href="{{ config.repo_url }}" title="{{ lang.t('source.link.title') }}" class="md-button">
+            Go to GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="center-container">
+    {{ super() }}    
+</div>
+
+<div id="annoGraph">
+</div>
+
+<div class="center-container">    
+    <p>Click on a bar to dive into the data. Clicking on a blank area of the graph will move you up a level.</p>    
+</div>
+
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script>
+
+    // edited by enriquedoster@gmail on 20190913 to shift graph by 70 units to the right (add 70 to "left:")
+    var margin = {top: 30, right: 120, bottom: 0, left: 280},
+        width = 1000 - margin.left - margin.right,
+        height = 750 - margin.top - margin.bottom;
+
+    var x = d3.scale.linear()
+        .range([0, width]);
+
+    var barHeight = 20;
+
+    var color = d3.scale.ordinal()
+        .range(["steelblue", "#ccc"]);
+
+    var duration = 750,
+        delay = 25;
+
+    var partition = d3.layout.partition()
+        .value(function(d) { return d.size; });
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("top");
+
+    var svg = d3.select("#annoGraph").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    svg.append("rect")
+        .attr("class", "background")
+        .attr("width", width)
+        .attr("height", height)
+        .on("click", up);
+
+    svg.append("g")
+        .attr("class", "x axis");
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .append("line")
+        .attr("y1", "100%");
+
+    d3.json("assets/annotations.json", function(error, root) {
+        if (error) throw error;
+
+        partition.nodes(root);
+        x.domain([0, root.value]).nice();
+        down(root, 0);
+    });
+
+    function down(d, i) {
+        if (!d.children || this.__transition__) return;
+        var end = duration + d.children.length * delay;
+
+        // Mark any currently-displayed bars as exiting.
+        var exit = svg.selectAll(".enter")
+            .attr("class", "exit");
+
+        // Entering nodes immediately obscure the clicked-on bar, so hide it.
+        exit.selectAll("rect").filter(function(p) { return p === d; })
+            .style("fill-opacity", 1e-6);
+
+        // Enter the new bars for the clicked-on data.
+        // Per above, entering bars are immediately visible.
+        var enter = bar(d)
+            .attr("transform", stack(i))
+            .style("opacity", 1);
+
+        // Have the text fade-in, even though the bars are visible.
+        // Color the bars as parents; they will fade to children if appropriate.
+        enter.select("text").style("fill-opacity", 1e-6);
+        enter.select("rect").style("fill", color(true));
+
+        // Update the x-scale domain.
+        x.domain([0, d3.max(d.children, function(d) { return d.value; })]).nice();
+
+        // Update the x-axis.
+        svg.selectAll(".x.axis").transition()
+            .duration(duration)
+            .call(xAxis);
+
+        // Transition entering bars to their new position.
+        var enterTransition = enter.transition()
+            .duration(duration)
+            .delay(function(d, i) { return i * delay; })
+            .attr("transform", function(d, i) { return "translate(0," + barHeight * i * 1.2 + ")"; });
+
+        // Transition entering text.
+        enterTransition.select("text")
+            .style("fill-opacity", 1);
+
+        // Transition entering rects to the new x-scale.
+        enterTransition.select("rect")
+            .attr("width", function(d) { return x(d.value); })
+            .style("fill", function(d) { return color(!!d.children); });
+
+        // Transition exiting bars to fade out.
+        var exitTransition = exit.transition()
+            .duration(duration)
+            .style("opacity", 1e-6)
+            .remove();
+
+        // Transition exiting bars to the new x-scale.
+        exitTransition.selectAll("rect")
+            .attr("width", function(d) { return x(d.value); });
+
+        // Rebind the current node to the background.
+        svg.select(".background")
+            .datum(d)
+            .transition()
+            .duration(end);
+
+        d.index = i;
+    }
+
+    function up(d) {
+        if (!d.parent || this.__transition__) return;
+        var end = duration + d.children.length * delay;
+
+        // Mark any currently-displayed bars as exiting.
+        var exit = svg.selectAll(".enter")
+            .attr("class", "exit");
+
+        // Enter the new bars for the clicked-on data's parent.
+        var enter = bar(d.parent)
+            .attr("transform", function(d, i) { return "translate(0," + barHeight * i * 1.2 + ")"; })
+            .style("opacity", 1e-6);
+
+        // Color the bars as appropriate.
+        // Exiting nodes will obscure the parent bar, so hide it.
+        enter.select("rect")
+            .style("fill", function(d) { return color(!!d.children); })
+            .filter(function(p) { return p === d; })
+            .style("fill-opacity", 1e-6);
+
+        // Update the x-scale domain.
+        x.domain([0, d3.max(d.parent.children, function(d) { return d.value; })]).nice();
+
+        // Update the x-axis.
+        svg.selectAll(".x.axis").transition()
+            .duration(duration)
+            .call(xAxis);
+
+        // Transition entering bars to fade in over the full duration.
+        var enterTransition = enter.transition()
+            .duration(end)
+            .style("opacity", 1);
+
+        // Transition entering rects to the new x-scale.
+        // When the entering parent rect is done, make it visible!
+        enterTransition.select("rect")
+            .attr("width", function(d) { return x(d.value); })
+            .each("end", function(p) { if (p === d) d3.select(this).style("fill-opacity", null); });
+
+        // Transition exiting bars to the parent's position.
+        var exitTransition = exit.selectAll("g").transition()
+            .duration(duration)
+            .delay(function(d, i) { return i * delay; })
+            .attr("transform", stack(d.index));
+
+        // Transition exiting text to fade out.
+        exitTransition.select("text")
+            .style("fill-opacity", 1e-6);
+
+        // Transition exiting rects to the new scale and fade to parent color.
+        exitTransition.select("rect")
+            .attr("width", function(d) { return x(d.value); })
+            .style("fill", color(true));
+
+        // Remove exiting nodes when the last child has finished transitioning.
+        exit.transition()
+            .duration(end)
+            .remove();
+
+        // Rebind the current parent to the background.
+        svg.select(".background")
+            .datum(d.parent)
+            .transition()
+            .duration(end);
+    }
+
+    // Creates a set of bars for the given data node, at the specified index.
+    function bar(d) {
+        var bar = svg.insert("g", ".y.axis")
+            .attr("class", "enter")
+            .attr("transform", "translate(0,5)")
+            .selectAll("g")
+            .data(d.children)
+            .enter().append("g")
+            .style("cursor", function(d) { return !d.children ? null : "pointer"; })
+            .on("click", down);
+
+        bar.append("text")
+            .attr("x", -6)
+            .attr("y", barHeight / 2)
+            .attr("dy", ".35em")
+            .style("text-anchor", "end")
+            .text(function(d) { return d.name; });
+
+        bar.append("rect")
+            .attr("width", function(d) { return x(d.value); })
+            .attr("height", barHeight);
+
+        return bar;
+    }
+
+// A stateful closure for stacking bars horizontally.
+    function stack(i) {
+        var x0 = 0;
+        return function(d) {
+            var tx = "translate(" + x0 + "," + barHeight * i * 1.2 + ")";
+    x0 += x(d.value);
+            return tx;
+        };
+    }
+
+</script>
+{% endblock %}
+
+{% block footer %}
+
+<footer class="md-footer">    
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+        <div class="md-copyright__highlight">
+          © Copyright Microbial Ecology Group.
+        </div>  
+      </div>      
+    </div>
+  </div>
+</footer>
+
+{% endblock %}

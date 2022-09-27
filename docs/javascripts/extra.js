@@ -1,0 +1,1 @@
+document.getElementsByName('query')[0].placeholder='Search AMR++ Docs';

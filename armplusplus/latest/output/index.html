@@ -1,0 +1,1356 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Antimicrobial Resistance Database for High-Throughput Sequencing">
+      
+      
+      
+      <link rel="icon" href="../../../assets/megares-logo.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+    
+    
+      
+        <title>Output - MEGARes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7a952b86.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#output" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+               
+  Welcome to the new MEGARes site! <a href="https://megares-old.meglab.org">Visit the old site here</a>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="MEGARes" class="md-header__button md-logo" aria-label="MEGARes" data-md-component="logo">
+      
+  
+  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   preserveAspectRatio="xMidYMid meet"
+   viewBox="0 0 300 300"
+   width="300"
+   height="300"
+   id="svg200"
+   sodipodi:docname="megares-logo.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview202"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="2.91"
+     inkscape:cx="142.61168"
+     inkscape:cy="149.82818"
+     inkscape:window-width="3440"
+     inkscape:window-height="1369"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g198" />
+  <defs
+     id="defs158">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect986"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,51,0,1 @ F,0,0,1,0,51,0,1 @ F,0,0,1,0,51,0,1 @ F,0,0,1,0,51,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="51"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="attach_path"
+       id="path-effect852"
+       lpeversion="1" />
+    <path
+       d="M0 0L301.5 0L301.5 300L0 300L0 0Z"
+       id="a1GmkaXFhc" />
+    <path
+       d="M46.9 105.6C46.9 142.93 46.9 163.67 46.9 167.82C46.9 177.98 53.89 183.69 64.36 183.69C74.84 183.69 81.82 178.3 81.82 167.82C81.82 163.67 81.82 142.93 81.82 105.6L105.95 105.6C105.95 142.93 105.95 163.67 105.95 167.82C105.95 190.04 89.44 205.6 64.36 205.6C39.28 205.6 22.46 190.04 22.46 167.82C22.46 163.67 22.46 142.93 22.46 105.6L46.9 105.6Z"
+       id="ePubGLbJJ" />
+    <path
+       d="M164.89 105.6C184.57 105.6 197.8 119.79 197.8 139.79C197.8 159.79 184.57 174.63 164.89 174.63C163.73 174.63 157.93 174.63 147.48 174.63L147.48 205.6L122.64 205.6L122.64 105.6C147.99 105.6 162.08 105.6 164.89 105.6ZM172.64 140.11C172.64 132.37 168.44 126.56 160.06 126.56C159.22 126.56 155.02 126.56 147.48 126.56L147.48 153.66L159.73 153.66C168.34 149.79 172.64 145.27 172.64 140.11Z"
+       id="e3xlgi979P" />
+    <path
+       d="M228.42 85.15L237.44 85.15L237.44 118.88L245.01 118.88L245.01 125.37L237.44 125.37L237.44 140.15L229.68 140.15L229.68 125.55L202.63 125.55L202.45 120.5L228.42 85.15ZM229.5 118.7C229.5 106.79 229.5 100.18 229.5 98.86C229.5 96.33 229.86 93.45 229.86 93.45C229.85 93.45 229.7 93.45 229.68 93.45C228.96 95.07 227.88 96.52 226.98 97.96C225.92 99.35 220.63 106.32 211.11 118.88L211.11 118.88L229.5 118.88L229.5 118.7Z"
+       id="c1yTzdREXX" />
+    <path
+       d="M276.4 101.25C276.4 95.94 272.34 92.23 266.5 92.23C259.25 92.23 255.36 99.13 255.36 99.13C254.8 98.75 250.27 95.78 249.7 95.41C253.24 89.05 259.78 85.15 267.03 85.15C277.11 85.15 284.36 91.34 284.36 100.72C284.36 118.4 258.19 121.23 258.01 133.61C259.83 133.61 268.91 133.61 285.25 133.61L285.25 140.15C264.03 140.15 252.24 140.15 249.88 140.15C249.7 138.56 249.53 137.15 249.53 135.91C249.53 116.63 276.4 113.8 276.4 101.25Z"
+       id="d2t6xtf3zG" />
+  </defs>
+  <g
+     id="g198">
+    <path
+       style="fill:#242c5c;fill-opacity:1"
+       d="m 51,0 h 199.5 a 51,51 45 0 1 51,51 v 198 a 51,51 135 0 1 -51,51 H 51 A 51,51 45 0 1 0,249 V 51 A 51,51 135 0 1 51,0 Z"
+       id="use160"
+       inkscape:path-effect="#path-effect986"
+       inkscape:original-d="m 0,0 c 100.5,0 201,0 301.5,0 0,100 0,200 0,300 C 201,300 100.5,300 0,300 0,200 0,100 0,0 Z" />
+    <g
+       id="g749"
+       transform="matrix(1.0556706,0,0,1.0556706,30.575397,27.430848)">
+      <path
+         style="opacity:1;fill:#ffffff;fill-opacity:1"
+         d="m 211.49077,46.97149 c -8.035,0 -14.574,6.534 -14.574,14.565 0,2.415 0.611,4.81 1.773,6.944 -0.598,1.247 -1.525,2.564 -2.578,3.65 -1.076,1.114 -2.389,2.103 -3.629,2.737 -1.74,-0.8 -3.58,-1.205 -5.471,-1.205 -4.652,0 -8.975,2.493 -11.342,6.524 -1.375,0.142 -3.006,0.048 -4.477,-0.257 -1.344,-0.28 -2.707,-0.767 -3.873,-1.378 0.059,-0.711 0.086,-1.424 0.086,-2.124 0,-14.305 -11.639,-25.941 -25.945,-25.941 -14.299,0 -25.934,11.638 -25.934,25.941 0,9.78 5.646,18.854 14.414,23.22 -0.244,1.983 -0.834,4.325 -1.639,6.486 -0.865,2.322 -2.045,4.626 -3.238,6.326 -0.125,0.18 -0.246,0.349 -0.363,0.509 -0.332,-0.023 -0.666,-0.043 -1.008,-0.043 -9.037,0 -16.389,7.351 -16.389,16.384 0,0.496 0.028,1.023 0.088,1.604 -1.982,0.889 -4.523,1.676 -7.025,2.174 -2.598004,0.518 -5.386004,0.768 -7.618004,0.668 -0.366,-0.014 -0.709,-0.035 -1.03,-0.063 -2.957,-4.771 -8.229,-7.727 -13.821,-7.727 -1.838,0 -3.663,0.322 -5.43,0.957 -0.745,-0.697 -1.436,-1.555 -1.963,-2.438 -0.549,-0.926 -0.983,-1.99 -1.237,-3.027 3.271,-3.113 5.143,-7.443 5.143,-11.927 0,-5.13 -2.335,-9.856 -6.417,-13.012 0.126,-1.68 0.616,-3.683 1.348,-5.508 0.741,-1.843 1.787,-3.646 2.873,-4.956 0.335,0.025 0.674,0.043 1.025,0.043 8.047,0 14.595,-6.533 14.595,-14.564 0,-8.036 -6.548,-14.573 -14.595,-14.573 -8.014,0 -14.533,6.538 -14.533,14.573 0,4.455 1.996,8.586 5.486,11.377 -0.128,1.674 -0.617,3.671 -1.347,5.492 -0.705,1.753 -1.686,3.471 -2.764,4.817 -0.791,-0.107 -1.479,-0.158 -2.147,-0.158 -7.541,0 -14.061,5.068 -15.939,12.359 l -0.022,0.01 c -1.475,0.636 -3.391,1.082 -5.256,1.228 -1.753,0.136 -3.559,0.009 -5.034,-0.322 -2.23,-6.58 -8.344,-10.98 -15.302,-10.98 -8.916,0 -16.169,7.253 -16.169,16.168 0,8.919 7.253,16.175 16.169,16.175 7.662,0 14.271,-5.416 15.816,-12.917 1.445,-0.59 3.275,-1.005 5.061,-1.146 1.677,-0.13 3.362,-0.021 4.813,0.282 1.974,7.136 8.452,12.091 15.863,12.091 1.453,0 2.916,-0.199 4.351,-0.596 0.842,0.734 1.619,1.666 2.205,2.646 0.619,1.043 1.081,2.232 1.313,3.375 -2.648,2.982 -4.104,6.793 -4.104,10.758 0,8.939 7.266,16.215 16.197,16.215 8.903,0 16.158,-7.176 16.257,-16.031 0.093,-0.045 0.188,-0.088 0.286,-0.135 2.019,-0.938 4.676,-1.773 7.290004,-2.295 2.598,-0.514 5.389,-0.764 7.618,-0.666 0.529,0.02 1.012,0.055 1.445,0.098 3.14,4.021 7.832,6.32 12.9,6.32 2.162,0 4.271,-0.422 6.271,-1.258 0.166,0.104 0.336,0.215 0.514,0.336 1.66,1.115 3.51,2.785 5.072,4.584 1.559,1.799 2.951,3.863 3.826,5.672 0.063,0.125 0.121,0.25 0.178,0.371 -2.205,3.195 -3.369,6.916 -3.369,10.779 0,10.508 8.547,19.057 19.055,19.057 10.51,0 19.059,-8.549 19.059,-19.057 0,-10.508 -8.549,-19.057 -19.059,-19.057 -3.184,0 -6.338,0.813 -9.143,2.355 -0.063,-0.039 -0.125,-0.082 -0.188,-0.125 -1.66,-1.115 -3.512,-2.787 -5.07,-4.584 -1.561,-1.799 -2.953,-3.863 -3.824,-5.672 -0.031,-0.063 -0.061,-0.123 -0.09,-0.184 2.057,-2.826 3.143,-6.145 3.143,-9.615 0,-5.316 -2.588,-10.297 -6.934,-13.376 0.012,-0.146 0.025,-0.298 0.043,-0.454 0.209,-2.063 0.824,-4.579 1.688,-6.899 0.863,-2.32 2.045,-4.625 3.236,-6.324 l 0.084,-0.118 c 1.105,0.142 2.205,0.212 3.275,0.212 6.941,0 13.469,-2.704 18.377,-7.617 2.383,-2.388 4.246,-5.15 5.541,-8.215 1.357,-0.128 2.951,-0.033 4.385,0.265 1.457,0.305 2.961,0.858 4.166,1.533 0.725,6.608 6.422,11.749 13.082,11.749 0.27,0 0.541,-0.015 0.809,-0.033 0.771,1.088 1.432,2.406 1.875,3.742 0.475,1.441 0.736,3.033 0.732,4.409 -3.205,2.431 -5.113,6.238 -5.113,10.241 0,7.084 5.746,12.846 12.811,12.846 7.074,0 12.832,-5.762 12.832,-12.846 0,-6.976 -5.607,-12.681 -12.555,-12.83 -0.834,-1.108 -1.58,-2.558 -2.063,-4.012 -0.514,-1.562 -0.779,-3.271 -0.732,-4.706 2.93,-2.516 4.604,-6.146 4.604,-10 0,-2.188 -0.557,-4.359 -1.607,-6.291 0.602,-1.229 1.518,-2.521 2.545,-3.585 1.014,-1.046 2.258,-1.996 3.449,-2.636 2.119,1.142 4.498,1.745 6.896,1.745 8.02,0 14.547,-6.536 14.547,-14.569 -0.001,-8.026 -6.526,-14.56 -14.55,-14.56 z m 0,22.135 c -4.178,0 -7.574,-3.396 -7.574,-7.569 0,-4.171 3.396,-7.565 7.576,-7.565 4.16,0 7.547,3.395 7.547,7.565 0,4.173 -3.387,7.569 -7.549,7.569 z m -24.476,11.559 c 3.416,0 6.195,2.786 6.195,6.21 0,3.414 -2.779,6.191 -6.195,6.191 -3.4,0 -6.166,-2.777 -6.166,-6.191 0,-3.426 2.763,-6.21 6.166,-6.21 z m 11.111,43.6 c -3.203,0 -5.811,-2.621 -5.811,-5.846 0,-3.217 2.605,-5.834 5.811,-5.834 3.215,0 5.832,2.617 5.832,5.834 0,3.225 -2.617,5.846 -5.832,5.846 z m -74.43,-4.338 c 5.168,0 9.373,4.209 9.373,9.385 0,5.18 -4.205,9.395 -9.373,9.395 -5.178,0 -9.391,-4.215 -9.391,-9.395 0.003,-5.176 4.216,-9.385 9.391,-9.385 z m 17.768,-24.575 c -10.438,0 -18.934,-8.488 -18.934,-18.922 0,-10.444 8.494,-18.941 18.934,-18.941 10.447,0 18.947,8.499 18.947,18.946 0.006,5.038 -1.957,9.78 -5.523,13.353 -3.584,3.588 -8.352,5.564 -13.424,5.564 z m -83.524004,4.713 c 5.225,0 9.476,4.248 9.476,9.469 0,5.228 -4.251,9.479 -9.476,9.479 -5.226,0 -9.477,-4.251 -9.477,-9.479 -0.002,-5.221 4.249,-9.469 9.477,-9.469 z m 15.302,-36.102 c 4.188,0 7.595,3.397 7.595,7.573 0,4.171 -3.409,7.565 -7.607,7.565 -4.147,0 -7.521,-3.395 -7.521,-7.565 0.002,-4.175 3.379,-7.573 7.533,-7.573 z m 4.658,87.451 c -5.071,0 -9.197,-4.135 -9.197,-9.215 0,-5.09 4.126,-9.229 9.197,-9.229 5.104,0 9.258,4.141 9.258,9.229 0,5.08 -4.153,9.215 -9.258,9.215 z m -61.516,-30.711 c -5.056,0 -9.169,-4.116 -9.169,-9.175 0,-5.056 4.113,-9.168 9.169,-9.168 5.051,0 9.161,4.11 9.161,9.164 -0.004,5.06 -4.113,9.179 -9.161,9.179 z m 138.861004,57.543 c -6.646,0 -12.057,-5.408 -12.057,-12.057 0,-6.646 5.408,-12.057 12.057,-12.057 6.646,0 12.057,5.408 12.057,12.057 0,6.649 -5.408,12.057 -12.057,12.057 z"
+         id="path747" />
+    </g>
+  </g>
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MEGARes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Output
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://db.meglab.org" class="md-tabs__link">
+      Browse Database
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../introduction/" class="md-tabs__link md-tabs__link--active">
+        AMR++ Docs
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../download/" class="md-tabs__link">
+        Downloads & Changelog
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="MEGARes" class="md-nav__button md-logo" aria-label="MEGARes" data-md-component="logo">
+      
+  
+  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   preserveAspectRatio="xMidYMid meet"
+   viewBox="0 0 300 300"
+   width="300"
+   height="300"
+   id="svg200"
+   sodipodi:docname="megares-logo.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview202"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="2.91"
+     inkscape:cx="142.61168"
+     inkscape:cy="149.82818"
+     inkscape:window-width="3440"
+     inkscape:window-height="1369"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g198" />
+  <defs
+     id="defs158">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect986"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,51,0,1 @ F,0,0,1,0,51,0,1 @ F,0,0,1,0,51,0,1 @ F,0,0,1,0,51,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="51"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="attach_path"
+       id="path-effect852"
+       lpeversion="1" />
+    <path
+       d="M0 0L301.5 0L301.5 300L0 300L0 0Z"
+       id="a1GmkaXFhc" />
+    <path
+       d="M46.9 105.6C46.9 142.93 46.9 163.67 46.9 167.82C46.9 177.98 53.89 183.69 64.36 183.69C74.84 183.69 81.82 178.3 81.82 167.82C81.82 163.67 81.82 142.93 81.82 105.6L105.95 105.6C105.95 142.93 105.95 163.67 105.95 167.82C105.95 190.04 89.44 205.6 64.36 205.6C39.28 205.6 22.46 190.04 22.46 167.82C22.46 163.67 22.46 142.93 22.46 105.6L46.9 105.6Z"
+       id="ePubGLbJJ" />
+    <path
+       d="M164.89 105.6C184.57 105.6 197.8 119.79 197.8 139.79C197.8 159.79 184.57 174.63 164.89 174.63C163.73 174.63 157.93 174.63 147.48 174.63L147.48 205.6L122.64 205.6L122.64 105.6C147.99 105.6 162.08 105.6 164.89 105.6ZM172.64 140.11C172.64 132.37 168.44 126.56 160.06 126.56C159.22 126.56 155.02 126.56 147.48 126.56L147.48 153.66L159.73 153.66C168.34 149.79 172.64 145.27 172.64 140.11Z"
+       id="e3xlgi979P" />
+    <path
+       d="M228.42 85.15L237.44 85.15L237.44 118.88L245.01 118.88L245.01 125.37L237.44 125.37L237.44 140.15L229.68 140.15L229.68 125.55L202.63 125.55L202.45 120.5L228.42 85.15ZM229.5 118.7C229.5 106.79 229.5 100.18 229.5 98.86C229.5 96.33 229.86 93.45 229.86 93.45C229.85 93.45 229.7 93.45 229.68 93.45C228.96 95.07 227.88 96.52 226.98 97.96C225.92 99.35 220.63 106.32 211.11 118.88L211.11 118.88L229.5 118.88L229.5 118.7Z"
+       id="c1yTzdREXX" />
+    <path
+       d="M276.4 101.25C276.4 95.94 272.34 92.23 266.5 92.23C259.25 92.23 255.36 99.13 255.36 99.13C254.8 98.75 250.27 95.78 249.7 95.41C253.24 89.05 259.78 85.15 267.03 85.15C277.11 85.15 284.36 91.34 284.36 100.72C284.36 118.4 258.19 121.23 258.01 133.61C259.83 133.61 268.91 133.61 285.25 133.61L285.25 140.15C264.03 140.15 252.24 140.15 249.88 140.15C249.7 138.56 249.53 137.15 249.53 135.91C249.53 116.63 276.4 113.8 276.4 101.25Z"
+       id="d2t6xtf3zG" />
+  </defs>
+  <g
+     id="g198">
+    <path
+       style="fill:#242c5c;fill-opacity:1"
+       d="m 51,0 h 199.5 a 51,51 45 0 1 51,51 v 198 a 51,51 135 0 1 -51,51 H 51 A 51,51 45 0 1 0,249 V 51 A 51,51 135 0 1 51,0 Z"
+       id="use160"
+       inkscape:path-effect="#path-effect986"
+       inkscape:original-d="m 0,0 c 100.5,0 201,0 301.5,0 0,100 0,200 0,300 C 201,300 100.5,300 0,300 0,200 0,100 0,0 Z" />
+    <g
+       id="g749"
+       transform="matrix(1.0556706,0,0,1.0556706,30.575397,27.430848)">
+      <path
+         style="opacity:1;fill:#ffffff;fill-opacity:1"
+         d="m 211.49077,46.97149 c -8.035,0 -14.574,6.534 -14.574,14.565 0,2.415 0.611,4.81 1.773,6.944 -0.598,1.247 -1.525,2.564 -2.578,3.65 -1.076,1.114 -2.389,2.103 -3.629,2.737 -1.74,-0.8 -3.58,-1.205 -5.471,-1.205 -4.652,0 -8.975,2.493 -11.342,6.524 -1.375,0.142 -3.006,0.048 -4.477,-0.257 -1.344,-0.28 -2.707,-0.767 -3.873,-1.378 0.059,-0.711 0.086,-1.424 0.086,-2.124 0,-14.305 -11.639,-25.941 -25.945,-25.941 -14.299,0 -25.934,11.638 -25.934,25.941 0,9.78 5.646,18.854 14.414,23.22 -0.244,1.983 -0.834,4.325 -1.639,6.486 -0.865,2.322 -2.045,4.626 -3.238,6.326 -0.125,0.18 -0.246,0.349 -0.363,0.509 -0.332,-0.023 -0.666,-0.043 -1.008,-0.043 -9.037,0 -16.389,7.351 -16.389,16.384 0,0.496 0.028,1.023 0.088,1.604 -1.982,0.889 -4.523,1.676 -7.025,2.174 -2.598004,0.518 -5.386004,0.768 -7.618004,0.668 -0.366,-0.014 -0.709,-0.035 -1.03,-0.063 -2.957,-4.771 -8.229,-7.727 -13.821,-7.727 -1.838,0 -3.663,0.322 -5.43,0.957 -0.745,-0.697 -1.436,-1.555 -1.963,-2.438 -0.549,-0.926 -0.983,-1.99 -1.237,-3.027 3.271,-3.113 5.143,-7.443 5.143,-11.927 0,-5.13 -2.335,-9.856 -6.417,-13.012 0.126,-1.68 0.616,-3.683 1.348,-5.508 0.741,-1.843 1.787,-3.646 2.873,-4.956 0.335,0.025 0.674,0.043 1.025,0.043 8.047,0 14.595,-6.533 14.595,-14.564 0,-8.036 -6.548,-14.573 -14.595,-14.573 -8.014,0 -14.533,6.538 -14.533,14.573 0,4.455 1.996,8.586 5.486,11.377 -0.128,1.674 -0.617,3.671 -1.347,5.492 -0.705,1.753 -1.686,3.471 -2.764,4.817 -0.791,-0.107 -1.479,-0.158 -2.147,-0.158 -7.541,0 -14.061,5.068 -15.939,12.359 l -0.022,0.01 c -1.475,0.636 -3.391,1.082 -5.256,1.228 -1.753,0.136 -3.559,0.009 -5.034,-0.322 -2.23,-6.58 -8.344,-10.98 -15.302,-10.98 -8.916,0 -16.169,7.253 -16.169,16.168 0,8.919 7.253,16.175 16.169,16.175 7.662,0 14.271,-5.416 15.816,-12.917 1.445,-0.59 3.275,-1.005 5.061,-1.146 1.677,-0.13 3.362,-0.021 4.813,0.282 1.974,7.136 8.452,12.091 15.863,12.091 1.453,0 2.916,-0.199 4.351,-0.596 0.842,0.734 1.619,1.666 2.205,2.646 0.619,1.043 1.081,2.232 1.313,3.375 -2.648,2.982 -4.104,6.793 -4.104,10.758 0,8.939 7.266,16.215 16.197,16.215 8.903,0 16.158,-7.176 16.257,-16.031 0.093,-0.045 0.188,-0.088 0.286,-0.135 2.019,-0.938 4.676,-1.773 7.290004,-2.295 2.598,-0.514 5.389,-0.764 7.618,-0.666 0.529,0.02 1.012,0.055 1.445,0.098 3.14,4.021 7.832,6.32 12.9,6.32 2.162,0 4.271,-0.422 6.271,-1.258 0.166,0.104 0.336,0.215 0.514,0.336 1.66,1.115 3.51,2.785 5.072,4.584 1.559,1.799 2.951,3.863 3.826,5.672 0.063,0.125 0.121,0.25 0.178,0.371 -2.205,3.195 -3.369,6.916 -3.369,10.779 0,10.508 8.547,19.057 19.055,19.057 10.51,0 19.059,-8.549 19.059,-19.057 0,-10.508 -8.549,-19.057 -19.059,-19.057 -3.184,0 -6.338,0.813 -9.143,2.355 -0.063,-0.039 -0.125,-0.082 -0.188,-0.125 -1.66,-1.115 -3.512,-2.787 -5.07,-4.584 -1.561,-1.799 -2.953,-3.863 -3.824,-5.672 -0.031,-0.063 -0.061,-0.123 -0.09,-0.184 2.057,-2.826 3.143,-6.145 3.143,-9.615 0,-5.316 -2.588,-10.297 -6.934,-13.376 0.012,-0.146 0.025,-0.298 0.043,-0.454 0.209,-2.063 0.824,-4.579 1.688,-6.899 0.863,-2.32 2.045,-4.625 3.236,-6.324 l 0.084,-0.118 c 1.105,0.142 2.205,0.212 3.275,0.212 6.941,0 13.469,-2.704 18.377,-7.617 2.383,-2.388 4.246,-5.15 5.541,-8.215 1.357,-0.128 2.951,-0.033 4.385,0.265 1.457,0.305 2.961,0.858 4.166,1.533 0.725,6.608 6.422,11.749 13.082,11.749 0.27,0 0.541,-0.015 0.809,-0.033 0.771,1.088 1.432,2.406 1.875,3.742 0.475,1.441 0.736,3.033 0.732,4.409 -3.205,2.431 -5.113,6.238 -5.113,10.241 0,7.084 5.746,12.846 12.811,12.846 7.074,0 12.832,-5.762 12.832,-12.846 0,-6.976 -5.607,-12.681 -12.555,-12.83 -0.834,-1.108 -1.58,-2.558 -2.063,-4.012 -0.514,-1.562 -0.779,-3.271 -0.732,-4.706 2.93,-2.516 4.604,-6.146 4.604,-10 0,-2.188 -0.557,-4.359 -1.607,-6.291 0.602,-1.229 1.518,-2.521 2.545,-3.585 1.014,-1.046 2.258,-1.996 3.449,-2.636 2.119,1.142 4.498,1.745 6.896,1.745 8.02,0 14.547,-6.536 14.547,-14.569 -0.001,-8.026 -6.526,-14.56 -14.55,-14.56 z m 0,22.135 c -4.178,0 -7.574,-3.396 -7.574,-7.569 0,-4.171 3.396,-7.565 7.576,-7.565 4.16,0 7.547,3.395 7.547,7.565 0,4.173 -3.387,7.569 -7.549,7.569 z m -24.476,11.559 c 3.416,0 6.195,2.786 6.195,6.21 0,3.414 -2.779,6.191 -6.195,6.191 -3.4,0 -6.166,-2.777 -6.166,-6.191 0,-3.426 2.763,-6.21 6.166,-6.21 z m 11.111,43.6 c -3.203,0 -5.811,-2.621 -5.811,-5.846 0,-3.217 2.605,-5.834 5.811,-5.834 3.215,0 5.832,2.617 5.832,5.834 0,3.225 -2.617,5.846 -5.832,5.846 z m -74.43,-4.338 c 5.168,0 9.373,4.209 9.373,9.385 0,5.18 -4.205,9.395 -9.373,9.395 -5.178,0 -9.391,-4.215 -9.391,-9.395 0.003,-5.176 4.216,-9.385 9.391,-9.385 z m 17.768,-24.575 c -10.438,0 -18.934,-8.488 -18.934,-18.922 0,-10.444 8.494,-18.941 18.934,-18.941 10.447,0 18.947,8.499 18.947,18.946 0.006,5.038 -1.957,9.78 -5.523,13.353 -3.584,3.588 -8.352,5.564 -13.424,5.564 z m -83.524004,4.713 c 5.225,0 9.476,4.248 9.476,9.469 0,5.228 -4.251,9.479 -9.476,9.479 -5.226,0 -9.477,-4.251 -9.477,-9.479 -0.002,-5.221 4.249,-9.469 9.477,-9.469 z m 15.302,-36.102 c 4.188,0 7.595,3.397 7.595,7.573 0,4.171 -3.409,7.565 -7.607,7.565 -4.147,0 -7.521,-3.395 -7.521,-7.565 0.002,-4.175 3.379,-7.573 7.533,-7.573 z m 4.658,87.451 c -5.071,0 -9.197,-4.135 -9.197,-9.215 0,-5.09 4.126,-9.229 9.197,-9.229 5.104,0 9.258,4.141 9.258,9.229 0,5.08 -4.153,9.215 -9.258,9.215 z m -61.516,-30.711 c -5.056,0 -9.169,-4.116 -9.169,-9.175 0,-5.056 4.113,-9.168 9.169,-9.168 5.051,0 9.161,4.11 9.161,9.164 -0.004,5.06 -4.113,9.179 -9.161,9.179 z m 138.861004,57.543 c -6.646,0 -12.057,-5.408 -12.057,-12.057 0,-6.646 5.408,-12.057 12.057,-12.057 6.646,0 12.057,5.408 12.057,12.057 0,6.649 -5.408,12.057 -12.057,12.057 z"
+         id="path747" />
+    </g>
+  </g>
+</svg>
+
+    </a>
+    MEGARes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://db.meglab.org" class="md-nav__link">
+        Browse Database
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          AMR++ Docs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AMR++ Docs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          AMR++ Docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        References
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../citing/" class="md-nav__link">
+        Citing AMR++
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accessing_AMR/" class="md-nav__link">
+        Accessing AMR Plus Plus v2.0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Output
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Output
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    Directory Structure
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependencies/" class="md-nav__link">
+        Dependencies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements/" class="md-nav__link">
+        Software Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQs/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_13" type="checkbox" id="__nav_3_13" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_13">
+          AMR ++ v1.1 Docs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AMR ++ v1.1 Docs" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_13">
+          <span class="md-nav__icon md-icon"></span>
+          AMR ++ v1.1 Docs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v1/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v1/analysisoutput/" class="md-nav__link">
+        Example Analysis and Output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_13_3" type="checkbox" id="__nav_3_13_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_13_3">
+          Initial Setup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Initial Setup" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_13_3">
+          <span class="md-nav__icon md-icon"></span>
+          Initial Setup
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v1/setup/installation/" class="md-nav__link">
+        Installation to Run AMR++
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v1/setup/import/" class="md-nav__link">
+        Import AMR++ Workflow
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_13_4" type="checkbox" id="__nav_3_13_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_13_4">
+          Running AMR++
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Running AMR++" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_13_4">
+          <span class="md-nav__icon md-icon"></span>
+          Running AMR++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v1/running/upload/" class="md-nav__link">
+        Upload Data into AMR++
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v1/running/runworkflow/" class="md-nav__link">
+        Run AMR++ Workflow
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_13_5" type="checkbox" id="__nav_3_13_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_13_5">
+          AMR++ Documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AMR++ Documentation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_13_5">
+          <span class="md-nav__icon md-icon"></span>
+          AMR++ Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v1/documentation/pipeline/" class="md-nav__link">
+        Pipeline Description
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v1/documentation/usermanual/" class="md-nav__link">
+        User Manual (Options and Settings)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v1/documentation/docker/" class="md-nav__link">
+        Docker Commands
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v1/references/" class="md-nav__link">
+        References
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v1/citing/" class="md-nav__link">
+        Citing AMR++
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v1/contact/" class="md-nav__link">
+        Contact
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Downloads & Changelog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Downloads & Changelog" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Downloads & Changelog
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../download/" class="md-nav__link">
+        Downloads
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    Directory Structure
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="output">Output</h1>
+<p>All intermediate outputs produced from each module of this pipeline are provided as flat files that can be viewed in a text editor. These files are copied from the root <strong>work/</strong> directory created by Nextflow, so if disk space is a concern, this directory should be deleted as it can get quite large.</p>
+<h2 id="directory-structure">Directory Structure</h2>
+<p>The output directories created by the pipeline are named after the module that produced them. Each file output is prefixed with the sample name and suffixed with a short product description. </p>
+<p>Files without sample prefixes are a result of aggregation. For example, the files <strong>host.removal.stats</strong> and <strong>trimmomatic.stats</strong> provide count matrices for the number of reads discarded as a result of host-dna removal and number of trimmed reads for each sample. </p>
+<div class="highlight"><pre><span></span><code>├── RunQC
+│   ├── Paired
+│   │   ├── SRR532663.1P.fastq
+│   │   └── SRR532663.2P.fastq
+│   ├── Stats
+│   │   └── trimmomatic.stats
+│   └── Unpaired
+│       ├── SRR532663.1U.fastq
+│       └── SRR532663.2U.fastq
+├── BuildHostIndex
+│   ├── chr21.fasta.amb
+│   ├── chr21.fasta.ann
+│   ├── chr21.fasta.bwt
+│   ├── chr21.fasta.pac
+│   └── chr21.fasta.sa
+├── AlignReadsToHost
+│   └── SRR532663.host.sam
+├── NonHostReads
+│   ├── SRR532663.non.host.R1.fastq
+│   └── SRR532663.non.host.R2.fastq
+├── RemoveHostDNA
+│   ├── HostRemovalStats
+│   │   └── host.removal.stats
+│   └── NonHostBAM
+│       └── SRR532663.host.sorted.removed.bam
+├── AlignToAMR
+│   └── SRR532663.amr.alignment.sam
+├── RunResistome
+│   └── SRR532663.gene.tsv
+├── ResistomeResults
+│   └── AMR_analytic_matrix.csv
+├── RunRarefaction
+│   ├── SRR532663.class.tsv
+│   ├── SRR532663.gene.tsv
+│   ├── SRR532663.group.tsv
+│   └── SRR532663.mech.tsv
+├── RunKraken
+│   └── SRR532663.kraken.report
+│   └── SRR532663.kraken.filtered.report
+├── KrakenResults
+│   └── kraken_analytic_matrix.csv
+├── FilteredKrakenResults
+│   └── filtered_kraken_analytic_matrix.csv
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../configuration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configuration" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Configuration
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../dependencies/" class="md-footer__link md-footer__link--next" aria-label="Next: Dependencies" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Dependencies
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; Copyright Microbial Ecology Group.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
